@@ -1,0 +1,158 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+.content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content h4 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--dark-alt);
+  margin-bottom: 50px;
+}
+.accordion .item {
+  width: 500px;
+  background: var(--light);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.accordion .item:last-child {
+  margin-bottom: 0;
+}
+.accordion .item .title {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: var(--dark-alt);
+  border-radius: 10px;
+}
+.accordion .item .title h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light);
+  width: calc(100% - 70px);
+}
+.accordion .item .title i {
+  width: 30px;
+  height: 30px;
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 30px;
+  transform: rotate(0);
+}
+.accordion .item.active .title i {
+  transform: rotate(-90deg);
+}
+.accordion .item .text {
+  padding: 0;
+  background: var(--light);
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease all;
+}
+.accordion .item.active .text {
+  padding: 30px 20px;
+  background: var(--light);
+  height: auto;
+}
+.accordion .item .text p {
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.5s ease all;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.accordion .item.active .text p {
+  opacity: 1;
+}

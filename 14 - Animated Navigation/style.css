@@ -1,0 +1,182 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+header {
+  width: 100%;
+  padding: 30px 0;
+  background: var(--dark);
+  box-shadow: var(--shadow);
+}
+.content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+  font-family: var(--serif);
+  color: var(--light);
+}
+.nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.nav.hide {
+  width: 40px;
+}
+.nav .toggle {
+  width: 40px;
+  height: 40px;
+  background: var(--light);
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  display: block;
+}
+.nav .toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--primary);
+  transition: 0.5s ease all;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav .toggle span:nth-child(1) {
+  top: 15px;
+}
+.nav .toggle span:nth-child(2) {
+  bottom: 15px;
+}
+.nav .toggle.hide span:nth-child(1) {
+  transform: rotate(-45deg) translateX(-50%);
+  left: 42%;
+  top: 10px;
+}
+.nav .toggle.hide span:nth-child(2) {
+  transform: rotate(45deg) translateX(-50%);
+  left: 42%;
+  bottom: 10px;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  transition: 0.5s ease all;
+  pointer-events: all;
+  opacity: 1;
+  width: auto;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  margin-right: 100px;
+}
+.nav.hide ul {
+  width: 0;
+  gap: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  margin-right: 0;
+}
+.nav.hide ul li a {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 1px;
+}
+.nav ul li a {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--light-alt);
+}

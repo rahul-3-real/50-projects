@@ -80,3 +80,44 @@ p {
 }
 
 /* Main */
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--secondary);
+}
+.content h4 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--dark-alt);
+  margin-bottom: 50px;
+}
+.card {
+  width: 500px;
+  text-align: center;
+  padding: 50px;
+  background: var(--primary);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+.card button {
+  padding: 13px 25px;
+  background: var(--dark);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--light);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.card h6 {
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--light-alt);
+  margin-bottom: 50px;
+}

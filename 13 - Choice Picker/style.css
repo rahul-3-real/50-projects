@@ -80,3 +80,57 @@ p {
 }
 
 /* Main */
+.content {
+  width: 100%;
+  height: 100vh;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card {
+  width: 50%;
+  background: var(--dark-alt);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+.card h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--light);
+  margin-bottom: 30px;
+}
+.card textarea {
+  width: 100%;
+  background: var(--light-alt);
+  border-radius: 5px;
+  border: 2px solid var(--light);
+  box-shadow: 0 0 0 5px #fff3;
+  padding: 15px;
+  font-size: 18px;
+  height: 120px;
+}
+.tags {
+  width: 50%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tags .item {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--light-alt);
+  background: var(--primary);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  text-transform: capitalize;
+}
+.tags .item.highlight {
+  background: var(--dark);
+}

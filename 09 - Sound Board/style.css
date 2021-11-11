@@ -14,9 +14,6 @@
   --dark-alt: #152d35;
   --light: #ffffff;
   --light-alt: #f4fcfc;
-
-  /* Shadow */
-  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 /* Default */
@@ -80,3 +77,30 @@ p {
 }
 
 /* Main */
+#buttons {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.btn {
+  background: var(--dark);
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  padding: 20px 35px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--light-alt);
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:focus {
+  outline: none;
+}
