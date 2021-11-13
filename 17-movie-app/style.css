@@ -1,0 +1,197 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+.content {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--secondary);
+}
+header {
+  width: 100%;
+  padding: 20px 50px;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1.logo {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: var(--serif);
+  color: var(--light);
+}
+header form input {
+  width: 400px;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 0 0 5px #3dd0b72e;
+}
+.movies {
+  width: 100%;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.card {
+  position: relative;
+  background: var(--light);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.card .image {
+  width: 100%;
+  height: 428px;
+  overflow: hidden;
+}
+.card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s ease all;
+  transition-delay: 0.3s;
+  background: #e2e2e2;
+  display: block;
+}
+.card .text {
+  padding: 20px;
+  background: var(--light);
+}
+.card .text .heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+.card .text .heading h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+  width: calc(100% - 70px);
+}
+.card .text .heading h6 {
+  background: var(--primary);
+  color: var(--light);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.card .text .heading h6.success {
+  background: #4caf50;
+}
+.card .text .heading h6.primary {
+  background: #ffa726;
+}
+.card .text .heading h6.secondary {
+  background: #e53935;
+}
+.card .description {
+  position: absolute;
+  bottom: -100%;
+  padding: 20px;
+  width: 100%;
+  height: 70%;
+  background: var(--dark-alt);
+  transition: 0.5s ease all;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: scroll;
+}
+.card:hover .description {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: all;
+}
+.card .description p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--light-alt);
+  line-height: 170%;
+}
