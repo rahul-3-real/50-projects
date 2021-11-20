@@ -1,0 +1,131 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+.content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 100px;
+  background: var(--secondary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#canvas {
+  border: 10px solid var(--primary);
+  box-shadow: var(--shadow);
+  background: var(--light);
+}
+.toolbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: column;
+}
+.toolbox button {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  background: var(--primary);
+  color: var(--light);
+  border-radius: 70px;
+  box-shadow: var(--shadow);
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.toolbox .color {
+  width: 150px;
+  height: 70px;
+  box-shadow: var(--shadow);
+  border: 5px solid var(--light);
+  background: var(--light);
+  padding: 0;
+  outline: 0;
+  overflow: hidden;
+  cursor: pointer;
+}

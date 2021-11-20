@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>31 - Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Content -->
+    <div class="content">
+      <div class="card">
+        <h3>Password Generator</h3>
+        <div class="result">
+          <span class="value"></span>
+          <button class="btn-clipboard">
+            <i class="fal fa-clipboard"></i>
+          </button>
+        </div>
+        <div class="settings">
+          <div class="option">
+            <label>Password Length</label>
+            <input type="number" id="length" max="20" min="4" value="20" />
+          </div>
+          <div class="option">
+            <label>Include Uppercase</label>
+            <input type="checkbox" id="uppercase" checked />
+          </div>
+          <div class="option">
+            <label>Include Lowercase</label>
+            <input type="checkbox" id="lowercase" checked />
+          </div>
+          <div class="option">
+            <label>Include Numbers</label>
+            <input type="checkbox" id="numbers" checked />
+          </div>
+          <div class="option">
+            <label>Include Symbols</label>
+            <input type="checkbox" id="symbols" checked />
+          </div>
+        </div>
+        <button class="button generate">Generate Password</button>
+      </div>
+    </div>
+    <!-- Content ~ Close -->
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+.content {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--primary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 30px;
+}
+form {
+  width: 50%;
+  background: var(--light);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  overflow: hidden;
+}
+form input {
+  width: 100%;
+  padding: 17px 25px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+}
+
+.container {
+  width: 50%;
+}
+.card {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background: var(--dark);
+  padding: 30px;
+}
+.card .message {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--light-alt);
+}
+.card .image {
+  width: 200px;
+}
+.card .image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+.card .text {
+  width: calc(100% - 230px);
+}
+.card .text h4 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--light);
+}
+.card .text p {
+  margin: 15px 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--light-alt);
+}
+.card .text ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  color: var(--light);
+}
+.card .text ul li {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.card .text ul li::after {
+  content: "|";
+  margin: 0 15px;
+  color: var(--light-alt);
+  opacity: 0.5;
+  font-weight: 100;
+}
+.card .text ul li:last-child::after {
+  display: none;
+}
+.card .text ul li span {
+  opacity: 0.5;
+}
+.card .text .tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.card .text .tags .tag {
+  padding: 10px 15px;
+  background: var(--primary);
+  color: var(--light-alt);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  font-weight: 400;
+  font-size: 16px;
+}
