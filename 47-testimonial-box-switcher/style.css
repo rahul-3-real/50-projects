@@ -1,0 +1,172 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+.content {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.card {
+  width: 50%;
+  padding: 50px;
+  background: var(--light);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.card .progress-bar {
+  background: var(--primary);
+  height: 4px;
+  width: 100%;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+.card .testimonial {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+  line-height: 28px;
+  text-align: justify;
+  position: relative;
+}
+.card .testimonial::before {
+  content: "\f10d";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--primary);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  opacity: 0.1;
+}
+.card .testimonial::after {
+  content: "\f10e";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--primary);
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  opacity: 0.1;
+}
+.card .info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+.card .info .image {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border: 5px solid var(--secondary);
+  margin-right: 30px;
+}
+.card .info .text {
+  width: calc(100% - 130px);
+}
+.card .info .text .username {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: var(--shadow);
+}
+.card .info .text .role {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-alt);
+}

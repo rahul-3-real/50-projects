@@ -1,0 +1,156 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --sans-serif: "Poppins", sans-serif;
+  --serif: "Playfair Display", serif;
+
+  /* Colors */
+  --primary: #345b63;
+  --secondary: #d4ecdd;
+  --dark: #112031;
+  --dark-alt: #152d35;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light-alt);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--secondary);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Main */
+.content {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 500px;
+  padding: 50px;
+  background: var(--light);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  text-align: center;
+}
+.card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark-alt);
+}
+.card .ratings {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px 0;
+  gap: 30px;
+}
+.card .ratings .item {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.5s ease all;
+}
+.card .ratings .item:hover,
+.card .ratings .item.active {
+  opacity: 1;
+}
+.card .ratings .item span {
+  font-size: 50px;
+}
+.card .ratings .item h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-alt);
+}
+.btn {
+  padding: 13px 15px;
+  background: var(--primary);
+  color: var(--light);
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.card i {
+  font-size: 30px;
+  color: #f44336;
+}
+.card b {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark-alt);
+  display: block;
+  margin-top: 20px;
+}
+.card p {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--dark-alt);
+}
