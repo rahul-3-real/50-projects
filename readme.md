@@ -1,10 +1,8 @@
 # 50 Projects
 
-### HTML, CSS, JavaScript
+I have used **HTML, CSS & JavaScript** for these projects.
 
-I have Used HTML, CSS, JavaScript for this project, it contain 50 projects.
-
-This is created with learning from Brad Traversy's 50 Days 50 Project Course
+This is created while learning from **Brad Traversy's 50 Days 50 Project** Course
 
 | ID  |           Project            |                                                                               Demo |
 | --- | :--------------------------: | ---------------------------------------------------------------------------------: |
